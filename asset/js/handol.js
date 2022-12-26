@@ -58,10 +58,10 @@ if (document.querySelector('.info_film-play.play')){
 
 function onclick_all_film(url){
     localStorage.setItem('url',url)
-    window.location = 'http://127.0.0.1:5500/film.html'
+    window.location = 'https://kiennguyen1306.github.io/web_movie/film.html'
 }
 
 function router(ob){
     localStorage.setItem('movie_id',ob)
-    window.location ='http://127.0.0.1:5500/info_film.html'
+    window.location ='https://kiennguyen1306.github.io/web_movie/info_film.html'
 }
