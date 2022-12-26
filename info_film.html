@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./asset/css/index.css" />
+    <link rel="stylesheet" href="./asset/css/info_fim.css" />
+    <link rel="stylesheet" href="./asset/css/reponsize.css" />
+    <title>web-movie</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header">
+        <div class="header">
+          <div class="header_logo">
+            <!-- <img src="https://banner2.cleanpng.com/20190630/ogy/kisspng-film-computer-icons-vector-graphics-clip-art-logo-fotografie-thun-chic-shot-productions-travel-5d1834d4a755c7.4505562315618674766854.jpg" alt=""> -->
+            <span><a href="http://127.0.0.1:5500">MOVIE</a></span>
+          </div>
+          <div class="header_center">
+            <ul>
+              <div class="close">
+                  <i class="fa-solid fa-xmark"></i>
+              </div>
+              </li>
+              <li class="active"><a class="active" href="http://127.0.0.1:5500">HOME</a></li>
+              <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?primary_release_year=2010&sort_by=vote_average.desc&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">PHIMLE</li>
+              <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">PHIMBO</li>
+              <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=e9e9d8da18ae29fc430845952232787c&language=en-US&page=1')">PHIMCHIEURAP</li>
+              <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">TVSHOW</li>
+              <li onclick="onclick_all_film('http://api.themoviedb.org/3/discover/movie?api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">TOPPHIM</li>
+          </ul>
+          </div>
+          <div class="header_right">
+            <div class="language">
+              <i class="fa-solid fa-earth-americas"></i>
+              <select name="" id="language">
+                <option value="1">tiếng việt</option>
+                <option value="1">tiếng anh</option>
+              </select>
+            </div>
+            <div class="login">
+              <button class="btn btn-frimary">Login</button>
+            </div>
+            <div class="open_nav">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="info_body">
+        <div class="info_film_main">
+        </div>
+
+        <div class="info_film_travel hide">
+          <iframe class="video_travel"src="#" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="close_travel">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div class="info_film-comment">
+          <div class="info_film-comment-heading">
+            <div class="info_film-comment-avatar">
+              <img
+                src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p48x48&_nc_cat=1&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=5JffEiPApLYAX_ZVuBk&_nc_ht=scontent.fsgn2-2.fna&edm=AJqh0Q8EAAAA&oh=00_AfCtkJ8PpyOEUS-j3LZ5ZXPiGpHpO0t305l4d38U29h7Vg&oe=6391C2B8"
+                alt=""
+              />
+            </div>
+            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+            <button class="btn btn_comment">Bình luận</button>
+          </div>
+          <div class="info_film_comment-body">
+            <div class="info_film_comment-body-user">
+              <div class="info_film_comment-body-avatar">
+                <img
+                  src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p48x48&_nc_cat=1&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=5JffEiPApLYAX_ZVuBk&_nc_ht=scontent.fsgn2-2.fna&edm=AJqh0Q8EAAAA&oh=00_AfCtkJ8PpyOEUS-j3LZ5ZXPiGpHpO0t305l4d38U29h7Vg&oe=6391C2B8"
+                  alt=""
+                />
+              </div>
+              <div class="info_film_comment-body-right">
+                <h3>name</h3>
+                <p>
+                  đã từng coi kh xót 1 tập nào, mà bây giờ quay lại xem cứ nhớ
+                  nhớ quên quên, kh còn thấy hay nx :((
+                </p>
+                <span>like</span>
+                <span>phản hồi</span>
+              </div>
+            </div>
+            <div class="info_film_comment-body-user">
+              <div class="info_film_comment-body-avatar">
+                <img
+                  src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p48x48&_nc_cat=1&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=5JffEiPApLYAX_ZVuBk&_nc_ht=scontent.fsgn2-2.fna&edm=AJqh0Q8EAAAA&oh=00_AfCtkJ8PpyOEUS-j3LZ5ZXPiGpHpO0t305l4d38U29h7Vg&oe=6391C2B8"
+                  alt=""
+                />
+              </div>
+              <div class="info_film_comment-body-right">
+                <h3>name</h3>
+                <p>
+                  đã từng coi kh xót 1 tập nào, mà bây giờ quay lại xem cứ nhớ
+                  nhớ quên quên, kh còn thấy hay nx :((
+                </p>
+                <span>like</span>
+                <span>phản hồi</span>
+                <div class="info_film_comment-body-user">
+                  <div class="info_film_comment-body-avatar">
+                    <img
+                      src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p48x48&_nc_cat=1&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=5JffEiPApLYAX_ZVuBk&_nc_ht=scontent.fsgn2-2.fna&edm=AJqh0Q8EAAAA&oh=00_AfCtkJ8PpyOEUS-j3LZ5ZXPiGpHpO0t305l4d38U29h7Vg&oe=6391C2B8"
+                      alt=""
+                    />
+                  </div>
+                  <div class="info_film_comment-body-right">
+                    <h3>name</h3>
+                    <p>
+                      đã từng coi kh xót 1 tập nào, mà bây giờ quay lại xem cứ
+                      nhớ nhớ quên quên, kh còn thấy hay nx :((
+                    </p>
+                    <span>like</span>
+                    <span>phản hồi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="film_slider">
+        <div class="main">
+          <div class="film_slider_heading">CÓ THỂ BẠN CŨNG MUỐN XEM</div>
+          <div class="from_slider">
+            <div class="filer_slider-wrapper">
+            </div>
+            <button class="btn prev">
+              <i class="fa-solid fa-caret-left"></i>
+            </button>
+            <button class="btn next">
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer main">
+          <ul>
+            <li class="footer_item-heading">Phim Mới</li>
+            <li>Phim chiếu rạp</li>
+            <li>Phim lẻ</li>
+            <li>Phim bộ</li>
+            <li>Phim hành động</li>
+            <li>Phim viễn tưởng</li>
+            <li>Phim tâm lý</li>
+            <li>Phim hài hước</li>
+          </ul>
+          <ul>
+            <li class="footer_item-heading">Phim Hay</li>
+            <li>Phim Mỹ</li>
+            <li>Phim Hàn Quốc</li>
+            <li>Phim Trung Quốc</li>
+            <li>Phim Thái Lan</li>
+            <li>Phim Việt Nam</li>
+            <li>Phim Ma Kinh Dị</li>
+            <li>Phim Hoạt Hình</li>
+          </ul>
+          <ul>
+            <li class="footer_item-heading">Phim Hot</li>
+            <li>Phimmoi</li>
+            <li>Sitemap</li>
+          </ul>
+          <ul>
+            <li class="footer_item-heading">Trợ giúp</li>
+            <li>Hỏi đáp</li>
+            <li>Liên hệ</li>
+            <li>Tin tức</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./asset/js/handol.js"></script>
+    <script src="./asset/js/info_film.js"></script>
+    <script src="./asset/js/comment.js"></script>
+  </body>
+</html>

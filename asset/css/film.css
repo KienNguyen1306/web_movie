@@ -1,0 +1,47 @@
+#all_film .film_caterogy {
+    padding-top: 50px;
+}
+
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.page-item{
+    padding: 5px 8px;
+    margin: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.page-link{
+    color: #fff;
+}
+
+
+.spinner{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: #dbdcef;
+    border-right-color: #474bff;
+    animation: spinner-d3wgkg 1s infinite linear;
+ }
+ 
+ @keyframes spinner-d3wgkg {
+    to {
+       transform: rotate(1turn);
+    }
+ }
+
+
+ .page-item.hide{
+    display: none;
+ }
+
+ .spinner.hide{
+    display: none;
+ }

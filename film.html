@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/css/index.css">
+    <link rel="stylesheet" href="./asset/css/film.css">
+    <link rel="stylesheet" href="./asset/css/reponsize.css">
+    <title>web-movie</title>
+</head>
+<body>
+    <div class="wrapper">
+       <header id ='header'>
+        <div class="header">
+            <div class="header_logo">
+                <span><a href="http://127.0.0.1:5500">MOVIE</a></span>
+            </div>
+            <div class="header_center">
+                <ul>
+                    <div class="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    </li>
+                    <li class="active"><a href="http://127.0.0.1:5500">HOME</a></li>
+                    <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?primary_release_year=2010&sort_by=vote_average.desc&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">PHIMLE</li>
+                    <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">PHIMBO</li>
+                    <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=e9e9d8da18ae29fc430845952232787c&language=en-US&page=1')">PHIMCHIEURAP</li>
+                    <li onclick="onclick_all_film('https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">TVSHOW</li>
+                    <li onclick="onclick_all_film('http://api.themoviedb.org/3/discover/movie?api_key=e9e9d8da18ae29fc430845952232787c&certification=R&certification_country=US&language=en-US&page=1&sort_by=vote_average.desc')">TOPPHIM</li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <div class="language">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <select name="" id="language">
+                        <option value="1">tiếng việt</option>
+                        <option value="1">tiếng anh</option>
+                    </select>
+                </div>
+                <div class="login">
+                    <button class="btn btn-frimary">Login</button>
+                </div>
+                <div class="open_nav">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            
+        </div>
+       </header>
+
+       <section id ='all_film'>
+            <section class="film_caterogy">
+                <div class="film_caterogy main">
+                    <h2 class="film_caterogy-headoing">ALL FiLM</h2>
+                    <div class="film_caterogy-bottom all_films">
+                    </div>
+                    <ul class="pagination">
+                        <li class="page-item "><a class="page-link" href="#">XEM THÊM</a></li>
+                        <li class="spinner hide"></li>
+                    </ul>
+                </div>
+            </section>
+       </section>
+
+
+        <footer id ='footer'>
+            <div class="footer main">
+                <ul>
+                    <li class="footer_item-heading">Phim Mới</li>
+                    <li>Phim chiếu rạp</li>
+                    <li>Phim lẻ </li>
+                    <li>Phim bộ</li>
+                    <li>Phim hành động</li>
+                    <li>Phim viễn tưởng</li>
+                    <li> Phim tâm lý</li>
+                    <li> Phim hài hước</li>
+                </ul>
+                <ul>
+                    <li class="footer_item-heading">Phim Hay</li>
+                    <li>Phim Mỹ</li>
+                    <li>Phim Hàn Quốc</li>
+                    <li>Phim Trung Quốc</li>
+                    <li>Phim Thái Lan</li>
+                    <li>Phim Việt Nam</li>
+                    <li>Phim Ma Kinh Dị</li>
+                    <li>Phim Hoạt Hình</li>
+                </ul>
+                <ul>
+                    <li class="footer_item-heading">Phim Hot</li>
+                    <li> Phimmoi</li>
+                    <li>Sitemap</li>
+                </ul>
+                <ul>
+                    <li class="footer_item-heading">Trợ giúp</li>
+                    <li> Hỏi đáp</li>
+                    <li> Liên hệ</li>
+                    <li>Tin tức</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./asset/js/handol.js"></script>
+    <script src="./asset/js/all_film.js"></script>
+</body>
+</html>
