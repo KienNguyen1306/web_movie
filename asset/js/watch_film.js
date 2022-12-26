@@ -14,7 +14,7 @@ async function get_api_by_movie_id(){
 }
 
 async function get_api_by_casts_id(){
-    let res = await fetch(`http://api.themoviedb.org/3/movie/${movie_id}/casts?api_key=e9e9d8da18ae29fc430845952232787c`)
+    let res = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/casts?api_key=e9e9d8da18ae29fc430845952232787c`)
     let data = res.json()
     return data
 }
