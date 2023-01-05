@@ -73,11 +73,14 @@ async function render_watch_movie_id(){
         <ul>
           <li>Quốc gia: <span>${data.production_countries.map(production_countrie=>production_countrie.name)}</span></li>
           <li>Điểm IMDb: <span>8,2</span></li>
-          <li>
-            Diễn viên:
-            <span>${cats.cast.map(da=>da.name)}</span>
-          </li>
+          
         </ul>
+      </div>
+      <div class="info_film-revew">
+        <h3>Diễn viên</h3>
+        <p>
+        ${cats.cast.map(da=>da.name)}
+        </p>
       </div>
       <div class="info_film-revew">
         <h3>Nội dung phim và review</h3>
