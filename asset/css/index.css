@@ -341,6 +341,10 @@ img{
     background-color: #150a0c;
     color:white;
     padding: 5px;
+      display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .film-item-name p{
     color: #fff;
