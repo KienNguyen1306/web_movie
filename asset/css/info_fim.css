@@ -150,14 +150,17 @@ width: 90%;
 .info_film-comment-avatar{
     width: 50px;
     height: 50px;
+      border-radius: 50%;
+    overflow: hidden;
 }
 
 #textarea{
     flex: 1;
-    height: 70px;
+    height: 50px;
     padding: 5px;
     margin:  0 10px;
     outline: none;
+  border-radius: 8px;
 }
 
 .btn_comment{
